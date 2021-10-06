@@ -8,6 +8,8 @@ import shop.ChootayBikes.Model.Bike;
 import shop.ChootayBikes.Services.BikeService;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/bike")
 public class BikeController {
@@ -21,13 +23,13 @@ public class BikeController {
         model.addAttribute("listBikes",bikeService.getAllBikes());
         return "index";
     }
-/*
+
     @RequestMapping("/bikes")
     public List<Bike> getAllBikes()
     {
         return bikeService.getAllBikes();
     }
-*/
+
     @RequestMapping("/addNewBike")
     public ModelAndView addNewBike(Model model){
         Bike bike = new Bike();

@@ -10,14 +10,14 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/home")
 public class Home {
 
-    @GetMapping("/user")
+    @GetMapping("/owner")
     public String user(){
-        return "<h1>Welcome User<h1>";
+        return "<h1>Welcome Owner<h1>";
     }
 
-    @GetMapping("/admin")
+    @GetMapping("/manager")
     public String admin(){
-        return "<h1>Welcome Admin<h1>";
+        return "<h1>Welcome Manager<h1>";
     }
 
     @RequestMapping("/index")
