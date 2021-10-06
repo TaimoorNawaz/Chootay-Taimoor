@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <meta charset="utf-8"/>
+
+    <title>Sales Person</title>
+
+</head>
+
+<body>
+
+<div align="center">
+
+    <h1>Bike Inventory List</h1>
+
+    <a th:href="@{/bike/addNewBike}">Add New Bike</a>
+
+    <br/><br/>
+
+    <table border="1" cellpadding="10">
+
+        <thead>
+
+        <tr>
+
+            <th>Product ID</th>
+
+            <th>Name</th>
+
+            <th>Brand</th>
+
+            <th>Made In</th>
+
+            <th>Price</th>
+
+            <th>Actions</th>
+
+        </tr>
+
+        </thead>
+
+        <tbody>
+
+        <tr th:each="bike : ${listBikes}">
+
+            <td th:text="${bike.id}">Model ID</td>
+
+            <td th:text="${bike.make}">Make</td>
+
+            <td th:text="${bike.modelName}">Model Name</td>
+
+            <td th:text="${bike.price}">Price</td>
+
+            <td th:text="${bike.cost}">Cost</td>
+
+            <td th:text="${bike.inventoryCount}">Cost</td>
+
+            <td>
+
+                <a th:href="/@{'/edit/' + ${bike.id}}">Edit</a>
+
+
+                <a th:href="/@{'/delete/' + ${bike.id}}">Delete</a>
+
+            </td>
+
+        </tr>
+
+        </tbody>
+
+    </table>
+
+</div>
+
+</body>
+
+</html>
+
+ 
+

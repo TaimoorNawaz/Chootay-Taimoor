@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <meta charset="utf-8"/>
+
+    <title>Bike Management</title>
+
+</head>
+
+<body>
+
+<div align="center">
+
+    <h1>Bike Management</h1>
+    <hr>
+    <h2> Add Bike</h2>
+    <form action="#" th:action="@{/bike/addBike}" th:object="${bike}" method="POST">
+        <input type="text" th:field="*{modelName}" placeholder="Bike Model" class="form-control mb-4 col-4">
+
+        <input type="text" th:field="*{make}" placeholder="Bike Make" class="form-control mb-4 col-4">
+
+        <input type="text" th:field="*{cost}" placeholder="Bike Retail Cost" class="form-control mb-4 col-4">
+
+        <input type="text" th:field="*{price}" placeholder="Bike Sale Price" class="form-control mb-4 col-4">
+
+        <input type="text" th:field="*{inventoryCount}" placeholder="Bike Inventory Count" class="form-control mb-4 col-4">
+
+        <button type="submit" class="btn btn-info col-2"> Add Bike</button>
+    </form>
+</div>
+
+</body>
+
+</html>
+
+
+
